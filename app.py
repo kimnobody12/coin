@@ -41,7 +41,7 @@ def admin():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        if username == 'admin' and password == 'admin':
+        if username == 'admin' and password == 'a192837456':
             session['logged_in'] = True
             return redirect(url_for('download_excel'))
         else:
