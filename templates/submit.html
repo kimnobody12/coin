@@ -1,36 +1,39 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>제출 완료</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 40px; }
-        .container {
-            max-width: 500px;
-            margin: auto;
-            background-color: #f0f8ff;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 12px rgba(0, 0, 255, 0.2);
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f2f5;
         }
-        h2 { color: #1e90ff; }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: #1e90ff;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 8px;
+        .message-box {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #555;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>신청이 완료되었습니다!</h2>
-        <p>신청해주셔서 감사합니다. 담당자가 확인 후 연락드릴 예정입니다.</p>
-        <a href="/">처음으로 돌아가기</a>
+    <div class="message-box">
+        <h1>제출이 완료되었습니다!</h1>
+        <p>곧 상담원이 연락드리겠습니다.</p>
     </div>
 </body>
 </html>

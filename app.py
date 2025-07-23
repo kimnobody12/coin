@@ -28,13 +28,16 @@ def form():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    name = request.form['name']
-    phone = request.form['phone']
-    with sqlite3.connect(db_path) as conn:
-        c = conn.cursor()
-        c.execute("INSERT INTO users (name, phone) VALUES (?, ?)", (name, phone))
-        conn.commit()
-    return render_template('thank_you.html')
+    try:
+        name = request.form['name']
+        phone = request.form['phone']
+        with sqlite3.connect(db_path) as conn:
+            c = conn.cursor()
+            c.execute("INSERT INTO users (name, phone) VALUES (?, ?)", (name, phone))
+            conn.commit()
+        return render_template('submit.html')
+    except Exception as e:
+        return f"오류 발생: {e}"
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
