@@ -34,7 +34,7 @@ def submit():
         c = conn.cursor()
         c.execute("INSERT INTO users (name, phone) VALUES (?, ?)", (name, phone))
         conn.commit()
-    return "제출이 완료되었습니다!"
+    return render_template('thank_you.html')
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
